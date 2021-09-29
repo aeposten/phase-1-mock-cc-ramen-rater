@@ -20,13 +20,12 @@ ramenForm.addEventListener(`submit`, (e) => {
   e.preventDefault();
 
   const newRamen = {};
-  newRamen.name = ramenName.value;
-  newRamen.restaurant = ramenRestaurant.value;
-  newRamen.image = ramenImage.value;
-  newRamen.rating = ramenRating.value;
-  newRamen.comment = ramenComment.value;
-
-  ramenArray(newRamen);
+  newRamen.name = e.target.name.value;
+  newRamen.restaurant = e.target.restaurant.value;
+  newRamen.image = e.target.image.value;
+  newRamen.rating = e.target.rating.value;
+  newRamen.comment = e.target.querySelector("#new-comment").value;
+  return getRamenArray(newRamen);
 });
 
 function getRamenArray(ramen) {
