@@ -37,7 +37,7 @@ function getRamenArray(ramen) {
     ramenName.innerHTML = ramen.name;
     ramenRestaurant.innerHTML = ramen.restaurant;
     ramenRating.innerHTML = ramen.rating;
-    ramenComment.inn = ramen.comment;
+    ramenComment.textContent = ramen.comment;
   });
 }
 fetchRamen();
